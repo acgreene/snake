@@ -19,7 +19,8 @@ find_package(glfw3 CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
 
 file(GLOB_RECURSE SRC_FILES src/*.cpp)
-add_executable(snake ${SRC_FILES})
+add_executable(snake ${SRC_FILES}
+        src/use_imgui.cpp)
 
 target_link_libraries(snake PRIVATE glad::glad)
 target_link_libraries(snake PRIVATE glfw)
