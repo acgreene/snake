@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.28)
-project(snake VERSION 1.0)
+project(Snake VERSION 1.0)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED On)
@@ -19,9 +19,9 @@ find_package(glfw3 CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
 
 file(GLOB_RECURSE SRC_FILES src/*.cpp)
-add_executable(snake ${SRC_FILES}
-        src/use_imgui.cpp)
+add_executable(Snake ${SRC_FILES}
+        src/UseImGui.cpp)
 
-target_link_libraries(snake PRIVATE glad::glad)
-target_link_libraries(snake PRIVATE glfw)
-target_link_libraries(snake PRIVATE imgui::imgui)
+target_link_libraries(Snake PRIVATE glad::glad)
+target_link_libraries(Snake PRIVATE glfw)
+target_link_libraries(Snake PRIVATE imgui::imgui)

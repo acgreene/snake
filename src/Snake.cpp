@@ -2,7 +2,7 @@
 // Created by alecgreene on 8/12/24.
 //
 
-#include "snake.h"
+#include "Snake.h"
 #include <iostream>
 
 Snake::Snake() = default;

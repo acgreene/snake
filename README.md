@@ -10,6 +10,10 @@ vcpkg install
 
 ## Build
 
+Note: configure the following option when running CMake:
+
+-DCMAKE_TOOLCHAIN_FILE=/path-to-vcpkg/scripts/buildsystems/vcpkg.cmake
+
 1. Configure the build using CMake:
 
 ```bash

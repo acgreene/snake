@@ -6,13 +6,12 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 
-
 class Snake
 {
-public:
+  public:
     Snake();
 
     static void hiss();
 };
 
-#endif //SNAKE_H
+#endif // SNAKE_H

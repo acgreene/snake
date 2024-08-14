@@ -2,10 +2,8 @@
 // Created by alecgreene on 8/12/24.
 //
 
-#include "snake.h"
-#include "glad/glad.h"
-#include "use_imgui.h"
-
+#include "Snake.h"
+#include "UseImGui.h"
 
 int main()
 {
@@ -13,12 +11,12 @@ int main()
     if (!glfwInit())
         return 1;
 
-    const char* glsl_version = "#version 130";
+    const char *glsl_version = "#version 130";
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 
     // Create window with graphics context
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "snake", nullptr, nullptr);
+    GLFWwindow *window = glfwCreateWindow(1280, 720, "Snake", nullptr, nullptr);
     if (window == nullptr)
         return 1;
     glfwMakeContextCurrent(window);
