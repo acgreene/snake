@@ -7,7 +7,12 @@
 
 Snake::Snake() = default;
 
-void Snake::hiss()
+void Snake::move(Direction const direction)
 {
-    std::cout << "Sssss!" << std::endl;
+    this->direction = direction;
+}
+
+void Snake::grow(int amount)
+{
+    this->body.push_back({0, 0});
 }
