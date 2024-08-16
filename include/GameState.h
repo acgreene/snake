@@ -1,7 +1,7 @@
 //
 // Created by alecgreene on 8/13/24.
 //
-
+#pragma once
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
 

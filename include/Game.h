@@ -2,6 +2,7 @@
 // Created by alecgreene on 8/14/24.
 //
 
+#pragma once
 #ifndef GAME_H
 #define GAME_H
 
@@ -19,9 +20,10 @@ class Game
     /**
      * @brief performs the initial setup for executing the game.
      *
-     * Initializes the GLFW window with an OpenGL 3.0 context, sets up vertical synchronization,
-     * and configures the viewport based on the window's framebuffer size. Loads
-     * OpenGL functions using GLAD and ensures the context is properly tied to the created window.
+     * Initializes the GLFW window with an OpenGL 3.0 context, sets up vertical
+     * synchronization, and configures the viewport based on the window's framebuffer size.
+     * Loads OpenGL functions using GLAD and ensures the context is properly tied to the
+     * created window.
      */
     void init();
     void handleInput();

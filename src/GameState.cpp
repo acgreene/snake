@@ -1,7 +1,6 @@
 //
 // Created by alecgreene on 8/13/24.
 //
-
 #include "GameState.h"
 
 GameState::GameState(State const state)

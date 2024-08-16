@@ -2,7 +2,6 @@
 // Created by alecgreene on 8/12/24.
 //
 
-#pragma once
 #ifndef SNAKE_H
 #define SNAKE_H
 #include <vector>

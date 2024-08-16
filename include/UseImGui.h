@@ -2,12 +2,13 @@
 // Created by alecgreene on 8/13/24.
 //
 
-#pragma once
 #ifndef USE_IMGUI_H
 #define USE_IMGUI_H
 
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
+#include <imgui_impl_glfw.h>
+#include <imgui_impl_opengl3.h>
 
 // A class that wraps ImGui setup and rendering
 class UseImGui
@@ -23,7 +24,7 @@ class UseImGui
      * @param window Pointer to the GLFW window that ImGui will use for input.
      * @param glsl_version String specifying the GLSL version to use with OpenGL.
      */
-    static void Init(GLFWwindow *window, const char *glsl_version);
+    static void init(GLFWwindow *window, const char *glsl_version);
 
     /**
      * @brief Starts a new ImGui frame.
@@ -31,7 +32,7 @@ class UseImGui
      * Initializes a new ImGui frame by calling the appropriate functions
      * to prepare for rendering.
      */
-    static void NewFrame();
+    static void newFrame();
 
     /**
      * @brief Updates the ImGui GUI.
@@ -40,14 +41,14 @@ class UseImGui
      * This function is intended to be used after NewFrame() and before
      * Render().
      */
-    static void Update();
+    static void update();
 
     /**
      * @brief Renders the ImGui GUI.
      *
      * Renders the current ImGui frame and draws it using OpenGL.
      */
-    static void Render();
+    static void render();
 
     /**
      * @brief Shuts down ImGui and cleans up resources.
@@ -55,7 +56,7 @@ class UseImGui
      * Cleans up ImGui resources and shuts down platform and renderer
      * bindings.
      */
-    static void Shutdown();
+    static void shutdown();
 };
 
 #endif // USE_IMGUI_H

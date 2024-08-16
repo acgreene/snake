@@ -20,7 +20,8 @@ int main()
     }
 
     /**
-     * Defines the version of the OpenGL Shading Language (GLSL) that will be used in the shaders.
+     * Defines the version of the OpenGL Shading Language (GLSL) that will be used in the
+     * shaders.
      * "#version 130" corresponds to OpenGL 3.0
      */
     const char *glsl_version = "#version 130";
@@ -39,8 +40,8 @@ int main()
     }
 
     /**
-     * Makes the OpenGL context of the specified window (window) the current context on the calling
-     * thread. All subsequent OpenGL calls will affect this context.
+     * Makes the OpenGL context of the specified window (window) the current context on the
+     * calling thread. All subsequent OpenGL calls will affect this context.
      */
     glfwMakeContextCurrent(window);
 
@@ -69,24 +70,24 @@ int main()
     glfwGetFramebufferSize(window, &screen_width, &screen_height);
 
     /**
-     * Sets the OpenGL viewport, which defines the area of the window where OpenGL will render. The parameters (0, 0)
-     * set the lower-left corner of the viewport, and (screen_width, screen_height) define the width and height of the
-     * viewport in pixels.
+     * Sets the OpenGL viewport, which defines the area of the window where OpenGL will render.
+     * The parameters (0, 0) set the lower-left corner of the viewport, and (screen_width,
+     * screen_height) define the width and height of the viewport in pixels.
      */
     glViewport(0, 0, screen_width, screen_height);
 
     UseImGui gui;
-    UseImGui::Init(window, glsl_version);
+    UseImGui::init(window, glsl_version);
     while (!glfwWindowShouldClose(window))
     {
         glfwPollEvents();
         glClear(GL_COLOR_BUFFER_BIT);
-        UseImGui::NewFrame();
-        gui.Update();
-        UseImGui::Render();
+        UseImGui::newFrame();
+        gui.update();
+        UseImGui::render();
         glfwSwapBuffers(window);
     }
-    UseImGui::Shutdown();
+    UseImGui::shutdown();
 
     return 0;
 }

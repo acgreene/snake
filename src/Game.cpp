@@ -1,7 +1,6 @@
 //
 // Created by alecgreene on 8/14/24.
 //
-
 #include "Game.h"
 
 void Game::run()
