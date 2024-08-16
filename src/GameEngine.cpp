@@ -17,18 +17,24 @@ void GameEngine::run() const
 {
     m_gui->update();
 
-    m_gui->render();
-
-    // Hack to get window to stay up
     SDL_Event e;
     bool quit = false;
-    while (quit == false)
+
+    // While application is running
+    while (!quit)
     {
-        while (SDL_PollEvent(&e))
+        // Handle events on queue
+        while (SDL_PollEvent(&e) != 0)
         {
+            // User requests quit
             if (e.type == SDL_QUIT)
+            {
                 quit = true;
+            }
+            m_snake->move(&e);
         }
+
+        m_gui->render();
     }
 }
 

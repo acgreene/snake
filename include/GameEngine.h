@@ -6,11 +6,12 @@
 #define GAMEENGINE_H
 
 #include "Gui.h"
+#include "Snake.h"
 
 class GameEngine
 {
   public:
-    GameEngine() : m_gui(new Gui())
+    GameEngine() : m_gui(new Gui()), m_snake(new Snake())
     {
     }
 
@@ -34,6 +35,7 @@ class GameEngine
   private:
     GameState m_current_state = Playing;
     Gui *m_gui;
+    Snake *m_snake;
 };
 
 #endif // GAMEENGINE_H

@@ -4,14 +4,31 @@
 #include "Snake.h"
 #include <iostream>
 
-Snake::Snake() = default;
-
-void Snake::move(Direction const direction)
+void Snake::move(const SDL_Event *e)
 {
-    this->direction = direction;
-}
+    if (e->type == SDL_KEYDOWN)
+    {
+        switch (e->key.keysym.sym)
+        {
+        case SDLK_UP:
+            std::cout << "Up" << std::endl;
+            break;
 
-void Snake::grow(int amount)
-{
-    this->body.push_back({0, 0});
+        case SDLK_DOWN:
+            std::cout << "Down" << std::endl;
+            break;
+
+        case SDLK_LEFT:
+            std::cout << "Left" << std::endl;
+            break;
+
+        case SDLK_RIGHT:
+            std::cout << "Right" << std::endl;
+            break;
+
+        default:
+            std::cout << "Default movement" << std::endl;
+            break;
+        }
+    }
 }
